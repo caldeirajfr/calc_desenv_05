@@ -1,4 +1,4 @@
-def calculadora(num1, num2, operacao):
+def calculadora(num1, num2, operacao): #função 
     if (operacao == 1):
         return num1 + num2
     elif (operacao == 2):
@@ -9,3 +9,28 @@ def calculadora(num1, num2, operacao):
         return num1 / num2
     else:
         return 0
+
+calcular = True #variável do loop
+
+while True:
+    print("Selecione uma opção:") #menu de opções
+    print("1: Soma")
+    print("2: Subtração")
+    print("3: Multiplicação")
+    print("4: Divisão")
+    print("0: Sair")
+    
+    operacao = int(input()) #interação do usuário
+    
+    if (operacao < 0 or operacao > 4):
+        print("Essa opção não existe")
+    elif (operacao == 0):
+        calcular = False
+    else:
+        print("Digite o primeiro número: ") #interação do usuário
+        num1 = int(input())
+        print("Digite o segundo número: ") #interação do usuário
+        num2 = int(input())
+
+        resultado = calculadora(num1, num2, operacao) #saída do resultado
+        print("O resultado é: ", resultado)
